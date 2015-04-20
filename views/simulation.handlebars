@@ -1,0 +1,200 @@
+<div class="container" id="settingsForm">
+    <div class="row">
+        <h2 class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-xs-offset-1 text-center">
+            Setea el máximo de productos a usar y luego presiona aceptar
+        </h2>
+        <div class="well col-lg-8 col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-xs-offset-1">
+            <form class="form-horizontal">
+                <div class="form-group center-block">
+                    <label class="control-label" for="inputMaxAgua">Agua</label>
+                    <div class="input-group">
+                        <input class="form-control text-right" id="inputMaxAgua" value=100 type="number" max=100 min=10>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </div>
+                <div class="form-group center-block">
+                    <label class="control-label" for="inputMaxMalta">Malta</label>
+                    <div class="input-group">
+                        <input class="form-control text-right" id="inputMaxMalta" value=100 type="number" max=100 min=10>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </div>
+                <div class="form-group center-block">
+                    <label class="control-label" for="inputMaxLupulo">Lúpulo</label>
+                    <div class="input-group">
+                        <input class="form-control text-right" id="inputMaxLupulo" value=100 type="number" max=100 min=10>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </div>
+                <div class="form-group center-block">
+                    <label class="control-label" for="inputMaxLevadura">Levadura</label>
+                    <div class="input-group">
+                        <input class="form-control text-right" id="inputMaxLevadura" value=100 type="number" max=100 min=10>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </div>
+            </form>
+                <button id="aceptarValoresIniciales" class="btn btn-success">
+                    Aceptar
+                </button>
+        </div>
+    </div>
+</div>
+
+<div class="container hidden" id="simulation">
+    <div class="container">
+        <a class="btn btn-success pull-right margin-md-top" id="iniciar">Iniciar</a>
+        <h1 class="text-primary">Simulación</h1>
+    </div>
+    <div class="row well"> <!-- Aquí están los valores iniciales -->
+        <div class="col-md-3 col-xs-3 col-sm-3">
+            Agua
+            <div class="progress">
+                <div id="nagua_max" class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-3 col-sm-3">
+            Malta
+            <div class="progress">
+                <div id="nmalta_max" class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-3 col-sm-3">
+            Lúpulo
+            <div class="progress">
+                <div id="nlupulo_max" class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-3 col-sm-3">
+            Levadura
+            <div class="progress">
+                <div id="nlevadura_max" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row well">
+
+        <div id="nmaceracionContainer" class="col-md-3 col-xs-3 col-sm-3">
+            <div class="hidden-xs">
+                <img class="img-responsive center-block" src="/img/1mac2.png" alt="Maceracion" />
+            </div>
+            <div class="progress">
+                <div id="nmaceracion" class="progress-bar"></div>
+            </div>
+            <p class="text-center bg-info">
+                Maceración
+            </p>
+        </div>
+
+        <div  id="nfiltradoContainer" class="col-md-3 col-xs-3 col-sm-3">
+            <div class="hidden-xs">
+                <img class="img-responsive center-block" src="/img/2filt.png" alt="Filtrado Lauter" />
+            </div>
+            <div class="progress">
+                <div id="nfiltrado" class="progress-bar"></div>
+            </div>
+            <p class='bg-info text-center'>
+                Filtrado lauter
+            </p>
+        </div>
+
+        <div  id="nhervidoContainer" class="col-md-3 col-xs-3 col-sm-3">
+            <div class="hidden-xs">
+                <img class="img-responsive center-block" src="/img/3lup.png" alt="Hervido" />
+            </div>
+            <div class="progress">
+                <div id="nhervido" class="progress-bar"></div>
+            </div>
+            <p class='bg-info text-center'>
+                Hervido
+            </p>
+        </div>
+
+        <div  id="ncentrifugadoContainer" class="col-md-3 col-xs-3 col-sm-3">
+            <div class="hidden-xs">
+                <img class="img-responsive center-block" src="/img/4centri.png" alt="Centrifugado" />
+            </div>
+            <div class="progress">
+                <div id="ncentrifugado" class="progress-bar"></div>
+            </div>
+            <p class='bg-info text-center'>
+                Centrifugado
+            </p>
+        </div>
+    </div>
+
+    <div class="row well">
+        <div id="nenfriamientoContainer" class="col-md-3 col-xs-3 col-sm-3">
+            <div class="hidden-xs">
+                <img class="img-responsive center-block" src="/img/5enfri.png" alt="Enfriamiento" />
+            </div>
+            <div class="progress">
+                <div id="nenfriamiento" class="progress-bar"></div>
+            </div>
+            <p class="text-center bg-info">
+                Enfriamiento
+            </p>
+        </div>
+        <div id="nfermentacion_maduracionContainer" class="col-md-3 col-xs-3 col-sm-3">
+            <div class="hidden-xs">
+                <img class="img-responsive center-block" src="/img/6fer.png" alt="Fermentación y maduración" />
+            </div>
+            <div class="progress">
+                <div id="nfermentacion_maduracion" class="progress-bar"></div>
+            </div>
+            <p class="text-center bg-info">
+                Fermentación y maduración
+            </p>
+        </div>
+        <div id="nfiltradoFinalContainer" class="col-md-3 col-xs-3 col-sm-3">
+            <div class="hidden-xs">
+                <img class="img-responsive center-block" src="/img/8filtf.png" alt="Filtrado final" />
+            </div>
+            <div class="progress">
+                <div id="nfiltrado_final" class="progress-bar"></div>
+            </div>
+            <p class="text-center bg-info">
+                Filtrado final
+            </p>
+        </div>
+        <div id="ncervezaContainer" class="col-md-3 col-xs-3 col-sm-3">
+            <div class="hidden-xs">
+                <img class="img-responsive center-block" src="/img/9cerv.png" alt="Barril de Cerveza" />
+            </div>
+            <div class="progress">
+                <div id="ncerveza" class="progress-bar"></div>
+            </div>
+            <p class="text-center bg-info">
+                Producto final
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Scripts -->
+<script>
+    toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-top-center",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+    }
+</script>
+
+<script src="/js/script.js"></script>
+<script src="/js/simulation.js"></script>

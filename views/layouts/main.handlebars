@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#007196">
+
+  <title>COBRE</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link type="text/css" rel="stylesheet" href="/css/normalize.css"  media="screen,projection"/>  
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/proceso.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/prism.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+</head>
+<body>
+  <div class="principal">
+      <div class="menu">
+        <h5>Controles Primarios</h5>
+        <button id="maquinaria" class="waves-effect waves-light btn  amber darken-3 segundo"><i class="mdi-toggle-radio-button-on left"></i>INICIAR MAQUINARIA</button>
+        <span id="linea"></span>
+        <h5>Control de Datos</h5>
+        <div id="titulos">
+          <h5>Cobre:</h5>
+          <h5 id="cobre">0</h5>
+          <span>
+            <a id="cobremenos" class="btn-floating btn-tiny waves-effect waves-light  cyan"><i class="mdi-content-remove"></i></a>
+            <a id="cobremas" class="btn-floating btn-tiny waves-effect waves-light  cyan"><i class="mdi-content-add"></i></a>
+          </span>
+        </div>
+
+        <div id="titulos">
+          <h5>Oxigeno:</h5>
+          <h5 id="oxigeno">0</h5>
+          <span>
+            <a id="oxigenomenos" class="btn-floating btn-tiny waves-effect waves-light  cyan"><i class="mdi-content-remove"></i></a>
+            <a id="oxigenomas" class="btn-floating btn-tiny waves-effect waves-light  cyan"><i class="mdi-content-add"></i></a>
+          </span>
+        </div>
+        <div id="titulos">
+          <h5>Barras:</h5>
+          <h5 id="barras">0</h5>
+          <span>
+            <a id="barrasmenos" class="btn-floating btn-tiny waves-effect waves-light  cyan"><i class="mdi-content-remove"></i></a>
+            <a id="barrasmas" class="btn-floating btn-tiny waves-effect waves-light  cyan"><i class="mdi-content-add"></i></a>
+          </span>
+        </div>
+        <button id="cargar" class="waves-effect waves-light cyan">Cargar Datos</button>
+
+        <span id="linea"></span>
+        <h5>Inventario</h5>
+        <div id="titulos">
+          <h5>Cobre:</h5>
+          <h5 id="cobretotal">0</h5>
+        </div>        
+        <div id="titulos">
+          <h5>Oxigeno:</h5>
+          <h5 id="oxigenototal">0</h5>
+        </div>
+        <div id="titulos">
+          <h5>Barras:</h5>
+          <h5 id="barras_inventario">0</h5>
+        </div>
+
+        <span id="linea"></span>
+        <h5>Informacion de Piezas</h5>
+        <div id="titulos" class="t2">
+            <a id="en_espera" class="btn btn-tiny fases indigo accent-3 ">0 en espera</a>
+            <a id="producidas" class="btn btn-tiny fases indigo accent-3 ">0 barras</a>
+        </div>
+      </div>
+
+      <div class="proceso">
+        <h4>PROCESO</h4>
+        <span id="linea"></span>
+        <h5>Monitor de señales</h5>
+        <div id="senales" class="t2">
+            <a id="1" class="btn btn-tiny fases indigo accent-3">1</i></a>
+            <a id="2" class="btn btn-tiny fases indigo accent-3">2</i></a>
+            <a id="3" class="btn btn-tiny fases indigo accent-3">3</i></a>
+            <a id="4" class="btn btn-tiny fases indigo accent-3">4</i></a>
+            <a id="5" class="btn btn-tiny fases indigo accent-3">5</i></a>
+        </div>
+        <div>
+          <img src="img/1.png" alt="TRITURADORA">
+          <img src="img/2.png" alt="MOLEDORA">
+          <img src="img/3.png" alt="CAMARA DE FLOTACIÓN">
+        </div>
+        <div>
+          <h6>TRITURADORA</h6>
+          <h6>MOLEDORA</h6>
+          <h6>CAMARA DE FLOTACIÓN</h6>
+        </div>
+        <div>
+          <img src="img/4.png" alt="FUNDIDORA">
+          <img src="img/5.png" alt="CONVERTIDOR">
+        </div>
+          <div>
+          <h6>FUNDIDORA</h6>
+          <h6>CONVERTIDOR</h6>
+        </div>
+      </div>
+  </div>
+</body>
+</html>

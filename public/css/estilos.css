@@ -1,0 +1,159 @@
+/*
+display: flex;
+flex-direction: row | row-reverse | column | column-reverse;
+justify-content: flex-start | flex-end | center | space-between | space-around;
+align-items: flex-start | flex-end | center | baseline | stretch;
+align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+flex-wrap: nowrap | wrap | wrap-reverse;
+flex-basis: <length> | auto;
+flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+order: <integer>;
+flex-grow: <number>;
+flex-shrink: <number>;
+*/
+html{
+	max-width: 1280px;	
+	margin: auto;	
+}
+
+.principal{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: flex-start;
+	width:100%;
+}
+
+.menu{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: flex-start;	
+	width:40%;
+}
+.menu button{
+	padding: 0 10% 0 10%;
+	height:60px;
+	margin-top: 1rem;
+}
+
+.menu .segundo{
+	padding: 0 8% 0 8%;
+	height:60px;
+	margin-top: 1rem;
+}
+#titulos{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	align-content: flex-start;	
+	text-align: right;
+	width:60%;
+}
+#titulos h5{
+	width:33%;
+}
+
+.t2
+{
+	margin-top: 1rem;
+}
+#titulos span button{
+	width:35px;
+	height:35px;
+	background: #26a69a;
+}
+#linea{
+	margin-top: 5%;
+	border:solid 1px;
+	border-color: rgba(0,0,0,0.3);
+	width:60%;
+}
+.proceso{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+	width:60%;
+}
+#senales{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	align-content: flex-start;	
+	width:100%;	
+}
+.proceso #linea{
+	width: 100%;
+}
+.proceso h5{
+	text-align: center;
+}
+
+#senales a {
+	width: 18%;
+}
+.proceso h4{
+	text-align: center;
+}
+.proceso div{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	/*align-items: center; /*Probar quitando*/
+	align-content: flex-start;
+	margin-top: 1rem;
+	width:100%;
+}
+.proceso div *{
+	width:25%;
+}
+
+.btn.fases
+{
+	padding: 0 8% 0 8%;
+}
+#cargar{
+	color:white;
+	height: 50px;
+	font-size: 1.2em;
+}
+/*-------------Animaciones-----------------*/
+@-webkit-keyframes ejemplo {
+	0% {background: red; left:0px; top:0px;}
+	25% {background: yellow; left:200px; top:0px;}
+	50% {background: green; left:200px; top:200px;}
+	75% {background: black; left:0px; top:200px;}
+	100% {background: green; left:0px; top:0px;}
+}
+
+/*-------------Responsive-----------------*/
+@media screen   and (max-width: 1050px) {
+	.principal{
+		flex-direction: column;
+	}
+	.proceso{
+		width:100%;
+	}
+	.menu{
+		width:100%;
+	}
+}
+@media screen   and (max-width: 400px) {
+	#titulos{
+		width:100%;
+	}
+	#linea{
+		width:100%;
+	}
+}
+
+#hola{
+	position: relative;
+	-webkit-animation-name:ejemplo;
+	-webkit-animation-duration:4s;
+}
