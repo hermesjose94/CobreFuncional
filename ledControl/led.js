@@ -10,13 +10,13 @@ Cylon.robot({
 
 		devices: {
 
-			led_maceracion: {driver: 'led', pin: 11},
-			led_filtrado1: {driver: 'led', pin: 12},
-			led_hervido: {driver: 'led', pin: 13},
-			led_centrifugado: {driver: 'led', pin: 15},
-			led_enfriamiento: {driver: 'led', pin: 16},
-			led_ferme_madu: {driver: 'led', pin: 18},
-			led_filtrado2: {driver: 'led', pin: 22},
+			led_1: {driver: 'led', pin: 11},
+			led_2: {driver: 'led', pin: 12},
+			led_3: {driver: 'led', pin: 13},
+			led_4: {driver: 'led', pin: 15},
+			led_5: {driver: 'led', pin: 16},
+			led_6: {driver: 'led', pin: 18},
+			led_7: {driver: 'led', pin: 22},
 		},
 
 		work: function(my){
@@ -30,37 +30,37 @@ Cylon.robot({
 
 				if (pos === 'on' ) {
 
-					if ( led === 'maceracion' || led === 'all')
-						my.led_maceracion.turnOn();
-					if ( led === 'filtrado1' || led === 'all')
-						 my.led_filtrado1.turnOn();
-					if ( led === 'hervido' || led === 'all')
-						 my.led_hervido.turnOn();
-					if ( led === 'centrifugado' || led === 'all')
-						 my.led_centrifugado.turnOn();
-					if ( led === 'enfriamiento' || led === 'all')
-					   my.led_enfriamiento.turnOn();
-					if ( led === 'ferme_madu' || led === 'all')
-					   my.led_ferme_madu.turnOn();
-					if ( led === 'filtrado2' || led === 'all')
-						my.led_filtrado2.turnOn();
+					if ( led === '1' || led === 'all')
+						my.led_1.turnOn();
+					if ( led === '2' || led === 'all')
+						 my.led_2.turnOn();
+					if ( led === '3' || led === 'all')
+						 my.led_3.turnOn();
+					if ( led === '4' || led === 'all')
+						 my.led_4.turnOn();
+					if ( led === '5' || led === 'all')
+					   my.led_5.turnOn();
+					if ( led === '6' || led === 'all')
+					   my.led_6.turnOn();
+					if ( led === '7' || led === 'all')
+						my.led_7.turnOn();
 
 				} else {
 
-					if ( led === 'maceracion' || led === 'all')
-						my.led_maceracion.turnOff();
-					if ( led === 'filtrado1' || led === 'all')
-						my.led_filtrado1.turnOff();
-					if ( led === 'hervido' || led === 'all')
-						my.led_hervido.turnOff();
-					if ( led === 'centrifugado' || led === 'all')
-						my.led_centrifugado.turnOff();
-					if ( led === 'enfriamiento' || led === 'all')
-						my.led_enfriamiento.turnOff();
-					if ( led === 'ferme_madu' || led === 'all')
-						my.led_ferme_madu.turnOff();
-					if ( led === 'filtrado2' || led === 'all')
-						my.led_filtrado2.turnOff();
+					if ( led === '1' || led === 'all')
+						my.led_1.turnOff();
+					if ( led === '2' || led === 'all')
+						my.led_2.turnOff();
+					if ( led === '3' || led === 'all')
+						my.led_3.turnOff();
+					if ( led === '4' || led === 'all')
+						my.led_4.turnOff();
+					if ( led === '5' || led === 'all')
+						my.led_5.turnOff();
+					if ( led === '6' || led === 'all')
+						my.led_6.turnOff();
+					if ( led === '7' || led === 'all')
+						my.led_7.turnOff();
 
 				}
 

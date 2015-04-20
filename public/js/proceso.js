@@ -101,18 +101,35 @@ var n=0;
         if(n==5){
           $("#1").attr({'class': 'btn btn-tiny fases indigo accent-3'});
           $("#2").attr({'class': 'btn btn-tiny fases red accent-3'});
+          $.get('/api/' + 1 + '/off' , function(data){
+            console.log(data);
+          $.get('/api/' + 2 + '/on' , function(data){
+            console.log(data);
         }
         if(n==10){
           $("#2").attr({'class': 'btn btn-tiny fases indigo accent-3'});
           $("#3").attr({'class': 'btn btn-tiny fases red accent-3'});
+          $.get('/api/' + 2 + '/off' , function(data){
+            console.log(data);
+          $.get('/api/' + 3 + '/on' , function(data){
+            console.log(data);
+          });
         }
         if(n==15){
           $("#3").attr({'class': 'btn btn-tiny fases indigo accent-3'});
           $("#4").attr({'class': 'btn btn-tiny fases red accent-3'});
+          $.get('/api/' + 3 + '/off' , function(data){
+            console.log(data);
+          $.get('/api/' + 4 + '/on' , function(data){
+            console.log(data);
         }
         if(n==20){
           $("#4").attr({'class': 'btn btn-tiny fases indigo accent-3'});
           $("#5").attr({'class': 'btn btn-tiny fases red accent-3'});
+          $.get('/api/' + 4 + '/off' , function(data){
+            console.log(data);
+          $.get('/api/' + 5 + '/on' , function(data){
+            console.log(data);
         }
         if(n==25){
           $("#5").attr({'class': 'btn btn-tiny fases indigo accent-3'});
